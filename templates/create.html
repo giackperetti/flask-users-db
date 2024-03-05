@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>{% block name %} Add a New User {% endblock %}</h1>
+    <form method="post">
+        <label for="name">User Creation</label>
+        <br>
+        <input type="text" name="name"
+               placeholder="User name"
+               value="{{ request.form['name'] }}"></input>
+        <br>
+
+        <button type="submit">Submit</button>
+    </form>
+{% endblock %}

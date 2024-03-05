@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>{% block title %} {% endblock %}- Test FlaskApp</title>
+    <style>
+      .users {
+        padding: 5px;
+        margin: 5px;
+        background-color: #ebdbb2;
+      }
+
+      nav a {
+        color: #458588;
+        font-size: 3em;
+        margin-left: 50px;
+        text-decoration: none;
+      }
+
+      .alert {
+        padding: 20px;
+        margin: 5px;
+        color: #cc241d;
+        background-color: #ebdbb2;
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <a href="{{ url_for('index') }}">FlaskApp</a>
+      <a href="{{ url_for('create') }}">Create</a>
+      <a href="#">About</a>
+    </nav>
+    <hr />
+    <div class="content">{% block content %} {% endblock %}</div>
+  </body>
+</html>
